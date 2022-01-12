@@ -24,8 +24,19 @@
 // console.log(Number(''))
 
 
-const max = 60;
-const min = 15;
-const result = Math.round(Math.random() * (max - min) + min);
+// const max = 60;
+// const min = 15;
+// const result = Math.round(Math.random() * (max - min) + min);
 
-console.log(result);
+// console.log(result);
+
+const numbers = [22, 28, 56, 167, 33, 217, 88, 16];
+let smallerNumber = numbers[0];
+
+for (const number of numbers) {
+    console.log(number);
+    if (number < smallerNumber) {
+        smallerNumber = number;
+    }
+}
+console.log("smallestNumber: ", smallerNumber);
