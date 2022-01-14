@@ -30,13 +30,24 @@
 
 // console.log(result);
 
-const numbers = [22, 28, 56, 167, 33, 217, 88, 16];
-let smallerNumber = numbers[0];
+// const numbers = [22, 28, 56, 167, 33, 217, 88, 16];
+// let smallerNumber = numbers[0];
 
-for (const number of numbers) {
-    console.log(number);
-    if (number < smallerNumber) {
-        smallerNumber = number;
-    }
+// for (const number of numbers) {
+//     console.log(number);
+//     if (number < smallerNumber) {
+//         smallerNumber = number;
+//     }
+// }
+// console.log("smallestNumber: ", smallerNumber);
+
+const message = ("Amazing SalE, only tonight!");
+const toLower=message.toLocaleLowerCase();
+let result;
+if (toLower.includes("span" || "sale")) {
+    result = false;
+} else {
+    result = true;
 }
-console.log("smallestNumber: ", smallerNumber);
+console.log(result);
+console.log(toLower);
