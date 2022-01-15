@@ -41,13 +41,25 @@
 // }
 // console.log("smallestNumber: ", smallerNumber);
 
-const message = ("Amazing SalE, only tonight!");
-const toLower=message.toLocaleLowerCase();
-let result;
-if (toLower.includes("span" || "sale")) {
-    result = false;
-} else {
-    result = true;
-}
-console.log(result);
-console.log(toLower);
+// const message = ("Amazing SalE, only tonight!");
+// const toLower=message.toLocaleLowerCase();
+// let result;
+// if (toLower.includes("span" || "sale")) {
+//     result = false;
+// } else {
+//     result = true;
+// }
+// console.log(result);
+// console.log(toLower);
+
+// const message = "hello world";
+// console.log(message);
+// alert(message);
+
+// let userInput = prompt('Введите число');
+// let userMult = prompt("Введите множитель");
+// let result = userInput*userMult
+
+// alert("Результат: " + result);
+
+
