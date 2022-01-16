@@ -87,13 +87,114 @@
 
 // out();
 
-function getExtremeElements(array) {
+
+
+// 9.2
+// function getExtremeElements(array) {
     
-    const newArray=[];
-  newArray[0]=array[0];
-  newArray[1]=array.length-1;
-  return newArray;
+//     const newArray=[];
+//   newArray[0]=array[0];
+//   newArray[1]=array[array.length-1]
+//   return newArray;
   
+// }
+
+// console.log(getExtremeElements(["Earth", "Mars", "Venus"]))
+
+
+//  10.2
+
+// function splitMessage(message, delimeter) {
+//   let words=message.split(delimeter);
+//   return words;
+// }
+
+// console.log(splitMessage("Mango", ""))
+
+
+
+//11.2
+// function calculateEngravingPrice(message, pricePerWord) {
+   
+//   // const messageOne = message.split(" ").length;
+//   const totalPrice = message.split(" ").length * pricePerWord
+//   return totalPrice
+   
+// }
+
+// alert(calculateEngravingPrice("Web-development is creative work", 40))
+
+
+
+
+//13.2
+// function slugify(title) {
+  
+
+//   const slug=title.split(" ").join("-").toLowerCase();
+  // return slug
+  
+// }
+
+// alert(slugify("How to become a JUNIOR developer in TWO WEEKS"));
+
+
+
+//16.2
+// function makeArray(firstArray, secondArray, maxLength) {
+    
+//   const allArray = firstArray.concat(secondArray);
+  
+//   const lastArray=allArray.slice(0, maxLength);
+//   return lastArray
+
+   
+// }
+  
+// alert(makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4));
+
+
+//18.2
+// function calculateTotal(number) {
+//   let total=0;
+//   for (let i=0; i<=number; i+=1)
+//   total+=i;
+//   return total;
+  
+// }
+
+// console.log(calculateTotal(7))
+
+
+
+//20.2
+// function calculateTotalPrice(order) {
+//   let total = 0;
+  
+//   for (let i = 0; i < order.length; i += 1) {
+//     total += order[i];
+//   }
+//   return total;
+  
+// }
+// console.log(calculateTotalPrice([12, 85, 37, 4]))
+
+
+
+//21.2
+function findLongestWord(string) {
+
+  const message = string.split(" ")
+  console.log(message)
+  let messageLong = message[0].length;
+  for (let i = 0; i < message.length; i += 1) {
+    console.log(message[i].length)
+    if (message[i].length > messageLong[i]) {
+      messageLong = message[i].length;
+    }
+    
+  }
+  return message[messageLong];
 }
 
-console.log(getExtremeElements([1, 2, 3, 4, 5]))
+console.log(findLongestWord("The quick brown fox jumped over the lazy dog"))
