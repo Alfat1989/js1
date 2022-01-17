@@ -182,19 +182,86 @@
 
 
 //21.2
-function findLongestWord(string) {
+// function findLongestWord(string) {
 
-  const message = string.split(" ")
-  console.log(message)
-  let messageLong = message[0].length;
-  for (let i = 0; i < message.length; i += 1) {
-    console.log(message[i].length)
-    if (message[i].length > messageLong[i]) {
-      messageLong = message[i].length;
-    }
+//   const message = string.split(" ")
+//   console.log(message)
+//   let messageLong = [];
+//   for (let mess of message) {
+//     console.log(mess)
+//     if (mess.length > messageLong.length) {
+//       messageLong = mess;
+//     }
     
-  }
-  return message[messageLong];
-}
+//   }
+//   return messageLong;
+// }
 
-console.log(findLongestWord("The quick brown fox jumped over the lazy dog"))
+// console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+
+
+
+
+
+//23.2
+// function filterArray(numbers, value) {
+//   const newAreeay = [];
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     console.log(numbers[i])
+//     if (numbers[i] > value) {
+//       newAreeay.push(numbers[i]);
+//     }
+//   }
+//   return newAreeay
+// }
+
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+
+
+
+//25.2
+// function getCommonElements(array1, array2) {
+//   const sameArray=[];
+//   for (let same of array1) {
+//     console.log(same);
+//     if (array2.includes(same)) {
+//       sameArray.push(same);
+//     }
+    
+//   }
+//   return sameArray;
+// }
+
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]))
+
+//29.2
+// function getEvenNumbers(start, end) {
+//   const nweEvent = [];
+//   for (let i = start; i <= end; i += 1)
+//     if (i % 2 === 0) {
+//       nweEvent.push(i)
+//     }
+//   return nweEvent
+// }
+// console.log(getEvenNumbers(6, 12));
+
+
+//32.2
+// function includes(array, value) {
+//   let real;
+  
+//   for (let i = 0; i < array.length; i+=1) {
+//     console.log(array[i]);
+//     if (array[i] === value) {
+//       real = true;
+//       break;
+//     } else {
+//       real = false;
+//     }
+
+//   }
+//   return real;
+// }
+  
+
+// console.log(includes([1, 2, 3, 4, 5], 3));
