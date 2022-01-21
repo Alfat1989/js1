@@ -133,15 +133,57 @@
 //////////////////////////Перебор объекта//////////////////////////
 //////Цикл for...in
 
-const book = {
-  title: "The Last Kingdom",
-  author: "Bernard Cornwell",
-  genres: ["historical prose", "adventure"],
-  rating: 8.38,
-};
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   rating: 8.38,
+// };
 
-for (const key in book) {
-    console.log(key);
-    console.log(book[key]);
+// for (const key in book) {
+//     console.log(key);
+//     console.log(book[key]);
+// }
+
+
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const keys = [];
+// const values = [];
+// for (const key in apartment){
+//   keys.push(key);
+//   values.push(apartment[key])
+// }
+// // for (const value in apartment){
+// // values.push(value);
+// // }
+
+// console.log(keys);
+// console.log(values);
+
+
+
+const keys = [];
+const values = [];
+const advert = {
+  service: "apt",
+};
+const apartment = Object.create(advert);
+apartment.descr = "Spacious apartment in the city center";
+apartment.rating = 4;
+apartment.price = 2153;
+
+for (const key in apartment) {
+  
+ if(apartment.hasOwnProperty(key))
+  keys.push(key);
+  values.push(apartment[key]);
+  
 }
 
+console.log(keys);
+console.log(values);
