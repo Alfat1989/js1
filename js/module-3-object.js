@@ -167,23 +167,77 @@
 
 
 
-const keys = [];
-const values = [];
-const advert = {
-  service: "apt",
-};
-const apartment = Object.create(advert);
-apartment.descr = "Spacious apartment in the city center";
-apartment.rating = 4;
-apartment.price = 2153;
+// const keys = [];
+// const values = [];
+// const advert = {
+//   service: "apt",
+// };
+// const apartment = Object.create(advert);
+// apartment.descr = "Spacious apartment in the city center";
+// apartment.rating = 4;
+// apartment.price = 2153;
 
-for (const key in apartment) {
+// for (const key in apartment) {
   
- if(apartment.hasOwnProperty(key))
-  keys.push(key);
-  values.push(apartment[key]);
+//  if(apartment.hasOwnProperty(key))
+//   keys.push(key);
+//   values.push(apartment[key]);
+  
+// }
+
+// console.log(keys);
+// console.log(values);
+
+
+
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   isPublic: true,
+//   rating: 8.38,
+// };
+
+// const userName = prompt("Enter name key: ");
+
+// book[userName] = "John";
+// const rusLanf="russian"
+// book.pageCount = 836;
+// book.language=["english", rusLanf]
+// console.log(book)
+// console.log(book.language)
+// alert(`User name is: ${book.name}`);
+
+const bookShelf = {
+  books: ["The Last Kingdom", "Dream Guardian", "Hurry Potter", "Matrix", "Witcher"],
+  getBooks() { },
+  addBooks(bookName) {
+    if (this.books.length < 6) {
+      this.books.push(bookName);
+      return this.books;
+    } 
+    return `books is too mutch`
+  },
   
 }
 
-console.log(keys);
-console.log(values);
+const bookSecond = {
+  books:[],
+  addBooks(bookName) {
+    if (this.books.length < 6) {
+      this.books.push(bookName);
+      return this.books;
+    } 
+    return `books is too mutch`
+  },
+  
+}
+
+console.log(bookShelf.addBooks("Supernatural"))
+
+bookShelf.name='cinema'
+console.log(bookShelf)
+console.log(bookSecond)
+
+console.log(bookSecond.addBooks('Muvies'))
+
