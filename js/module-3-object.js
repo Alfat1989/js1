@@ -208,36 +208,105 @@
 // console.log(book.language)
 // alert(`User name is: ${book.name}`);
 
-const bookShelf = {
-  books: ["The Last Kingdom", "Dream Guardian", "Hurry Potter", "Matrix", "Witcher"],
-  getBooks() { },
-  addBooks(bookName) {
-    if (this.books.length < 6) {
-      this.books.push(bookName);
-      return this.books;
-    } 
-    return `books is too mutch`
-  },
+// const bookShelf = {
+//   books: ["The Last Kingdom", "Dream Guardian", "Hurry Potter", "Matrix", "Witcher"],
+//   getBooks() { },
+//   addBooks(bookName) {
+//     if (this.books.length < 6) {
+//       this.books.push(bookName);
+//       return this.books;
+//     }
+//     return `books is too mutch`
+//   },
   
+// }
+
+// const bookSecond = {
+//   books:[],
+//   addBooks(bookName) {
+//     if (this.books.length < 6) {
+//       this.books.push(bookName);
+//       return this.books;
+//     }
+//     return `books is too mutch`
+//   },
+  
+// }
+
+// console.log(bookShelf.addBooks("Supernatural"))
+
+// bookShelf.name='cinema'
+// console.log(bookShelf)
+// console.log(bookSecond)
+
+// console.log(bookSecond.addBooks('Muvies'))
+
+16.3
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   const values = Object.values(salaries);
+//   // console.log(values)
+//   for (let val of values){
+//     totalSalary += val;
+    
+//   }
+  
+//   return totalSalary;
+// }
+
+// countTotalSalary({ mango: 100, poly: 150, alfred: 80 })
+
+
+
+
+//18.3
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   // Change code below this line
+//   for (const prod of products) {
+//     console.log(prod);
+//     let prodPrice;
+//     if (prod.name === productName) {
+//       prodPrice = prod.price;
+//       return prodPrice;
+//     }
+    
+//   }
+//   return null;
+//   // Change code above this line
+// }
+
+// console.log(getProductPrice("Engine"))
+
+
+
+
+const products = [
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "Droid", price: 400, quantity: 7 },
+  { name: "Grip", price: 1200, quantity: 9 },
+];
+
+
+function getAllPropValues(propName) { 
+  for (let prod of products) {
+    console.log(prod);
+    for (let key in prod) {
+      console.log(key);
+      if (key===prod[propName])
+      console.log('hello')
+    }
+    
+  }
+
 }
 
-const bookSecond = {
-  books:[],
-  addBooks(bookName) {
-    if (this.books.length < 6) {
-      this.books.push(bookName);
-      return this.books;
-    } 
-    return `books is too mutch`
-  },
-  
-}
-
-console.log(bookShelf.addBooks("Supernatural"))
-
-bookShelf.name='cinema'
-console.log(bookShelf)
-console.log(bookSecond)
-
-console.log(bookSecond.addBooks('Muvies'))
+console.log(getAllPropValues("name"))
 
