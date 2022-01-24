@@ -286,27 +286,24 @@
 
 
 
+// //19.3
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
 
-const products = [
-  { name: "Radar", price: 1300, quantity: 4 },
-  { name: "Scanner", price: 2700, quantity: 3 },
-  { name: "Droid", price: 400, quantity: 7 },
-  { name: "Grip", price: 1200, quantity: 9 },
-];
 
-
-function getAllPropValues(propName) { 
-  for (let prod of products) {
-    console.log(prod);
-    for (let key in prod) {
-      console.log(key);
-      if (key===prod[propName])
-      console.log('hello')
-    }
+// function getAllPropValues(propName) { 
+//   const arrayValues=[]
+//   for (let prod of products) {
+//     console.log(prod);
+//     arrayValues.push(prod[propName])
     
-  }
+//   }
+//   return arrayValues;
+// }
 
-}
-
-console.log(getAllPropValues("name"))
+// console.log(getAllPropValues("quantity"))
 
