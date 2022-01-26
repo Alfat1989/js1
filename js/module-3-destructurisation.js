@@ -15,24 +15,37 @@
 
 
 
-function multiplyMax(number) {
-  let total = 0;
-  for (let i = 0; i <= number; i += 1){
-    total += i;
+// function multiplyMax(number) {
+//   let total = 0;
+//   for (let i = 0; i <= number; i += 1){
+//     total += i;
+//   }
+//   return total;
+// }
+// console.log(multiplyMax(8))
+
+
+// function minNumber(array) {
+//   let minNum=array[0]
+//   for (const arr of array) {
+//     if (minNum > arr) {
+//       minNum = arr;
+//     }
+//   }
+//   return Math.round(minNum);
+// }
+
+// console.log(minNumber([77,45,34,7.7,11,8,12]))
+
+
+function arrayOfNumbers(min, max) {
+  const newArray = [];
+  for (let i = min; i <= max; i += 1){
+    
+      newArray.push(i);
+    
   }
-  return total; 
-}
-console.log(multiplyMax(8))
-
-
-function minNumber(array) {
-  let minNum=array[0]
-  for (const arr of array) {
-    if (minNum > arr) {
-      minNum = arr;
-    }
-  }
-  return Math.round(minNum);
+  return newArray;
 }
 
-console.log(minNumber([77,45,34,7.7,11,8,12]))
+console.log(arrayOfNumbers(1,3))
