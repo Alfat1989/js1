@@ -65,3 +65,19 @@
 
 
 
+function findMatches(firstArray, ...othersNumber) {
+  const matches = []; // Don't change this line
+  for (const number of othersNumber) {
+      console.log(number)
+      if (firstArray.includes(number)) {
+          matches.push(number)
+      }
+      
+  }
+
+  // Change code above this line
+  return matches;
+}
+
+console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7))
+
