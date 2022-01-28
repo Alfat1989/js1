@@ -64,20 +64,35 @@
 // console.log(calculateTotalPrice("Droid"))
 
 
-
-function findMatches(firstArray, ...othersNumber) {
-  const matches = []; // Don't change this line
-  for (const number of othersNumber) {
-      console.log(number)
-      if (firstArray.includes(number)) {
-          matches.push(number)
-      }
+// 33.3
+// function findMatches(firstArray, ...othersNumber) {
+//   const matches = []; // Don't change this line
+//   for (const number of othersNumber) {
+//       console.log(number)
+//       if (firstArray.includes(number)) {
+//           matches.push(number)
+//       }
       
-  }
+//   }
 
-  // Change code above this line
-  return matches;
-}
+//   // Change code above this line
+//   return matches;
+// }
 
-console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7))
+// console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7))
 
+
+
+
+const bookShelf = {
+  
+  books: ["The last kingdom", "The guardian of dreams"],
+  
+  getBooks() {
+    return this.books;
+  },
+
+   
+};
+
+console.log(bookShelf.getBooks())
