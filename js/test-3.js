@@ -84,15 +84,88 @@
 
 
 
-const bookShelf = {
+// const bookShelf = {
   
-  books: ["The last kingdom", "The guardian of dreams"],
+//   books: ["The last kingdom", "The guardian of dreams"],
   
-  getBooks() {
-    return this.books;
-  },
+//   getBooks() {
+//     return this.books;
+//   },
 
    
+// };
+
+// console.log(bookShelf.getBooks())
+
+
+
+// const objectFIrst = {
+//   name: ["John"],
+//   secondName: "Connor",
+//   add(param) {
+//     this.name.push(param);
+//   },
+//   newKey(key) {
+//     this[key]
+//   },
+  
+// }
+  
+// objectFIrst.city="Los Angeles"
+  
+// objectFIrst.newKey('state')
+
+// objectFIrst.add("Sarra")
+
+
+
+// console.log(objectFIrst)
+
+
+
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+  // Change code below this line
+  getPotions() {
+    return this.potions;
+  },
+  addPotion(newPotion) {
+    
+      if (this.potions.includes(newPotion)) {
+        return `Error! Potion ${newPotion} is already in your inventory!`;
+      }
+    
+
+      this.potions.push(newPotion);
+    
+  },
+  removePotion(potionName) {
+    const potionIndex = this.potions.indexOf(potionName);
+
+    if (potionIndex === -1) {
+      return `Potion ${potionName} is not in inventory!`;
+    }
+
+    this.potions.splice(potionIndex, 1);
+  },
+  updatePotionName(oldName, newName) {
+    const potionIndex = this.potions.indexOf(oldName);
+
+    if (potionIndex === -1) {
+      return `Potion ${oldName} is not in inventory!`;
+    }
+
+    this.potions.splice(potionIndex, 1, newName);
+  },
+  // Change code above this line
 };
 
-console.log(bookShelf.getBooks())
+atTheOldToad.addPotion({name:"Speed potion"})
+
+console.log(atTheOldToad.potions)
+
+
