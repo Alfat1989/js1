@@ -84,11 +84,11 @@
 // const doMath = function (a, b, callback/*переменная для функции add*/) {
 //     const result = callback(a, b/*передали параметры для функции add*/);
     
-//     console.log(result); /*выдача результата*/ 
+//     console.log(result); /*выдача результата*/
 // }
 
 // const add = function (x, y/*приняли параметры то callback (a,b)*/) {
-//     return x + y; 
+//     return x + y;
 // }
 
 // const sub = function (x, y) {
@@ -115,15 +115,18 @@
 ///////////////////////////////////ЗАМЫКАНИЯ/////////////////////////////////
 
 
-const fnA = function (parametr) {
-    const innerVariablr = "Значение внутренней переменной";
+// const fnA = function (parametr) {
+//     const innerVariablr = "Значение внутренней переменной";
 
-    const innerFunction = function () {
-        console.log("Это вызов innerFunction");
-    };
-    return innerFunction;
-};
+//     const innerFunction = function () {
+//         console.log("Это вызов innerFunction");
+//     };
+//     return innerFunction;
+// };
 
-const fnB = fnA();
-fnB()
-console.log(fnB)
+// const fnB = fnA();
+// fnB()
+// console.log(fnB)
+
+
+/////////////////////////////////////////////////////////////////////////////////
