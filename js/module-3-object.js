@@ -367,7 +367,125 @@
 
 
 
+// const lastWeek = [1, 2, 3];
+// const currentWeek = [4, 5, 6];
+// const nextWeek = [7, 8, 9, 6, 11, 33, 85, 356, 31, 13, 6,];
+
+// const allConcat = [...lastWeek, ...currentWeek];
+// console.log(allConcat)
+
+
+// const search = function (name) {
+//     if (lastWeek.includes(name)) {
+//         console.log("yes")
+//     } else {
+//         console.log("no")
+//     }
+    
+// }
+
+
+// search(2)
+
+
+// const playlist = {
+//     name: "My list",
+//     tag: "rap",
+//     traks: ["mike", "mouse"],
+//     status: {
+//         views: 320,
+//         likes: 201,
+//     },
+// }
+
+// const { name, tag, traks, status: { views, likes, } } = playlist;
+
+
+// console.log(name);
+// console.log(views);
+// console.log(Object.keys(playlist))
+// console.log(Object.values(playlist))
+
+
+
 /////////////////////Корзина товаров////////////////////////
- 
+
+const cart = {
+    items: [],
+    getItems() {
+        return this.items;
+     },
+    addProduct(product) { 
+        const { items } = this;
+        for (let item of items) {
+            if (item.name === product.name) {
+                
+                item.quantity += 1;
+                return;
+            }
+        }
+        const newProduct = {  //создали переменную куда распвлили обьект, добавили свойство новое и запушили его
+            ...product,
+            quantity: 1,
+        };
+
+        items.push(newProduct) // Запушили тут
+    },
+    remove(productName) { 
+        const { items } = this; //деструктурировали
+        for (let i = 0; i < items.length; i += 1){
+            const {name} = items[i];  //деструктурировали
+            if (productName === name) {
+                console.log("Find product: ", productName)
+                this.items.splice(i, 1);
+            }
+        }
+    },
+    clear() {
+        this.items = [];
+    },
+    countTotalPrice() { 
+        const { items } = this;
+        let total = 0;
+        for (let { price, quantity } of items)  {
+            total += price * quantity;
+        }
+        return total;
+    },
+    increaseQuantity(productName) { 
+        const { items } = this.items;
+        for (let {name, quantity} of items) {
+            if (name === productName) {
+                quantity += 1;
+                return;
+            }
+        }
+    },
+    decreaseQuantity(productName) { },
+    
+};
 
 
+
+console.log(cart.getItems())
+
+cart.addProduct({ name: "Apple", price: 50 });
+cart.addProduct({ name: "Limon", price: 60 });
+cart.addProduct({ name: "Grape", price: 60 });
+cart.addProduct({ name: "Strawberry", price: 110 });
+cart.addProduct({ name: "Strawberry", price: 110 });
+cart.addProduct({ name: "Strawberry", price: 110 });
+
+
+
+console.table(cart.getItems())
+console.log(cart.countTotalPrice())
+cart.remove("Limon")
+
+console.table(cart.getItems())
+console.log(cart.countTotalPrice())
+
+// cart.clear();
+cart.increaseQuantity("Apple")
+console.table(cart.getItems())
+console.log(cart.countTotalPrice())
