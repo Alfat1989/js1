@@ -295,7 +295,7 @@
 // ];
 
 
-// function getAllPropValues(propName) { 
+// function getAllPropValues(propName) {
 //   const arrayValues=[]
 //   for (let prod of products) {
 //     console.log(prod);
@@ -306,4 +306,68 @@
 // }
 
 // console.log(getAllPropValues("quantity"))
+
+// const playlist = {
+    
+//     addKey(nameKey) {
+//         this[nameKey] = '';
+//     },
+//     addValueForKey(nameKey, valueForKey) {
+//         this[nameKey] = valueForKey;
+//     },
+
+//     cityOne(name) {
+//         this.city = name;
+//     },
+// }
+
+// playlist.cityOne("Moscow")
+// playlist.addKey("name")
+// playlist.addValueForKey("adress", "Los Angeles")
+// playlist.addValueForKey("adress", "Washington")
+// console.log(playlist);
+
+
+// const washingPowder = [
+//     { name: "Ariel", weight: 3, automat: true, price: 60 },
+//     { name: "Tide", weight: 3, automat: true, price: 57 },
+//     { name: "Persil", weight: 3, automat: false, price: 52 },
+//     { name: "Losc", weight: 3, automat: false, price: 50 },
+// ];
+
+// const addKey = function (newKey) {
+    
+//     for (let washing of washingPowder) {
+        
+//         washing[newKey] = 1;
+//         washing.total = washing.price * washing[newKey];
+        
+//     }
+//     return washingPowder;
+// }
+
+// const addProduct = function (productName) {
+//     for (let washing of washingPowder) {
+//         if (washing.name === washing[productName]) {
+//             washing.automat = +1;
+//         }
+//         washingPowder.push(washing.productName)
+//     }
+   
+// };
+
+// addProduct("Ariel")
+
+// console.table(addKey("amount"))
+
+
+
+
+// console.log(washingPowder)
+
+
+
+/////////////////////Корзина товаров////////////////////////
+ 
+
 
