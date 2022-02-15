@@ -79,18 +79,18 @@ const book = {
   },
 }
 
-const showThis=function() {
-    console.log(this);
-  }
+// const showThis=function() {
+//     console.log(this);
+//   }
 
 const bookSecond = {
   title: "JS for beginner",
   
 }
 
-bookSecond.showThis = showThis;
+// bookSecond.showThis = showThis;
  
-bookSecond.showThis()
+// bookSecond.showThis()
 
 
 const counter = {
@@ -133,4 +133,84 @@ greetGuest.call(mango, "Добро пожаловать" );
 
 
 // makeMessage(customer.getFullName.bind(customer));
+
+const user = {
+  tag: "mango",
+  showTag() {
+    console.log(this)
+  }
+}
+
+const showThis = function () {
+  console.log("This in showThis: ", this)
+}
+
+const foo = () => {
+  console.log("This is foo: ", this)
+}
+
+const user2 = {
+  tag:"Poly",
+}
+
+const objA = {
+  x: 25,
+  z: 33,
+};
+
+user2.showUserTag=user.showTag
+
+user2.fnFoo = user.showTag
+
+user2.showUserTag()
+user2.fnFoo()
+
+const anotherShowThis=showThis.bind(objA)
+
+showThis.call(objA)
+
+anotherShowThis()
+
+
+
+const objects = [
+  { name: "Mango", price: 50, quantity: 1, },
+  { name: "Poly", price: 47, quantity: 1, },
+  { name: "Apple", price: 44, quantity: 1, },
+  { name: "Qiwi", price: 52, quantity: 1, },
+  { name: "Banana", price: 51, quantity: 1, },
+
+]
+
+const pushTotalPrice = function (objects) {
+
+  for (let obj of objects) {
+    
+    console.log(obj)
+    obj.total = obj.price * obj.quantity;
+    console.log(obj.total)
+  }
+}
+
+const moreQuantity = function (name, quantitys, array) {
+  for (let arr of array) {
+    
+    if (arr.name === name) {
+      arr.quantity = quantitys;
+      // arr.total=arr.price * quantitys
+    } else {
+      console.log("That product none")
+     }
+
+  }
+}
+
+moreQuantity("Poly", 6, objects);
+
+pushTotalPrice(objects)
+
+console.log(objects)
+
+
+
 
