@@ -24,3 +24,4 @@ const callback = fruit => {
 
 console.log(filter(fruits, callback))
 
+
