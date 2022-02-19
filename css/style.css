@@ -1,3 +1,35 @@
-.header-line {
-  background-color: aqua;
+body {
+  margin: 16px;
+  font-size: 20px;
+  font-family: sans-serif;
+  background-color: blanchedalmond;
+}
+
+.accent {
+  color: tomato;
+  text-decoration: underline;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.list-item {
+  padding: 8px;
+  border-width: 2px;
+  border-style: dashed;
+}
+
+.list-item:nth-child(even) {
+  border-color: tomato;
+}
+
+.list-item:nth-child(odd) {
+  border-color: blueviolet;
+}
+
+.list-item:not(:last-child) {
+  margin-bottom: 8px;
 }
