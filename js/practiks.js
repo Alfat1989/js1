@@ -84,15 +84,15 @@
 // 	For “Admin” show “Good evening, dear Admin!
 
 
-const currentHours = new Date().getHours();
-console.log(currentHours);
-let time = '';
-if (currentHours > 5 && currentHours < 20) {
-  time = 'day';
-} else {
-  time = 'evening';
-}
-const askLogin = prompt('Введи свой логин');
+// const currentHours = new Date().getHours();
+// console.log(currentHours);
+// let time = '';
+// if (currentHours > 5 && currentHours < 20) {
+//   time = 'day';
+// } else {
+//   time = 'evening';
+// }
+// const askLogin = prompt('Введи свой логин');
 // if (askLogin === null || askLogin === '') {
 //   alert('Canceled.');
 // } else if (askLogin.length < 4) {
@@ -113,23 +113,100 @@ const askLogin = prompt('Введи свой логин');
 // } else {
 //   alert("I don't know you");
 // }
-if (askLogin === null || askLogin === '') {
-  alert('Canceled.');
-} else if (askLogin.length < 4) {
-  alert("I don't know any users having name length less than 4 symbols");
-} else if (askLogin === 'User' || askLogin === 'Admin') {
-  const getPassword = prompt('Введи пароль');
-  if (getPassword !== null && getPassword !== '') {
-    if (askLogin === 'User' && getPassword === 'UserPass') {
-      alert(`Good ${time}, dear User!`);
-    } else if (askLogin === 'Admin' && getPassword === 'RootPass') {
-      alert(`Good ${time}, dear Admin!`);
-    } else {
-      alert('Wrong password!');
-    }
-  } else {
-    alert('Canceled');
-  }
-} else {
-  alert("I don't know you");
+// if (askLogin === null || askLogin === '') {
+//   alert('Canceled.');
+// } else if (askLogin.length < 4) {
+//   alert("I don't know any users having name length less than 4 symbols");
+// } else if (askLogin === 'User' || askLogin === 'Admin') {
+//   const getPassword = prompt('Введи пароль');
+//   if (getPassword !== null && getPassword !== '') {
+//     if (askLogin === 'User' && getPassword === 'UserPass') {
+//       alert(`Good ${time}, dear User!`);
+//     } else if (askLogin === 'Admin' && getPassword === 'RootPass') {
+//       alert(`Good ${time}, dear Admin!`);
+//     } else {
+//       alert('Wrong password!');
+//     }
+//   } else {
+//     alert('Canceled');
+//   }
+// } else {
+//   alert("I don't know you");
+// }
+
+//////////////////////////////////////////////////////////
+
+// function squareDigits(num) {
+//   const numArr = String(num).split("").map(el=>el**2);
+//   return Number(numArr.join(""))
+  
+// }
+
+// console.log(squareDigits(9119))
+
+
+// function accum(s) {
+//   const textArr = s.toLowerCase().split("")
+//     const array=textArr.map((el,index)=>el.toUpperCase()+el.repeat(index)).join("-");
+//   return (array);
+// }
+
+// console.log(accum("dfdsdf"))
+
+// function isIsogram(str){
+//   const text = str.toLowerCase().split("");
+//   console.log(text)
+//   const text2 = [...text].filter((el, ind, arr) => (arr.indexOf(el) === ind));
+//   console.log(text2)
+//   if (text.length===text2.length) {
+//     return true
+//   }
+//   return false
+// }
+
+// console.log( isIsogram("Dermatoglyphics"))
+// console.log( isIsogram("aba"))
+
+// function reverseWords(str) {
+//   const strArr=str.split(" ").map(el=>el.split("").reverse().join("")).join(" ")
+//   return strArr;
+// }
+
+// console.log(reverseWords("This is an example!"))
+
+/////////////////////////количкство пассажиров//////////////////////
+const number = function(busStops){
+  // console.log(busStops)
+  
+  return busStops.reduce((acc,el)=>acc+(el[0]-el[1]),0);
+  
 }
+
+console.log(number([[3, 0], [9, 1], [4, 8], [12, 2], [6, 1], [7, 8]]))
+
+//////////////////////////////сумма положительных чисел//////////////////////////
+function positiveSum(arr) {
+  const number = arr.reduce((acc, el) => {
+    return el>0? acc+el:acc
+  }, 0)
+  return number
+}
+
+console.log(positiveSum([-1, -2, -3, -4, -5]));
+
+
+//////////////////////////////////////////Если среднее число массива меньше чем параметр yourPoints)
+function betterThanAverage(classPoints, yourPoints) {
+  return [...classPoints].reduce((acc, el) => acc+el, 0)/ classPoints.length < yourPoints ? true : false;
+  
+  
+}
+
+console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75))
+
+
+function sumMix(x){
+  return x.reduce((acc,el)=>acc+Number(el),0)
+}
+
+console.log(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]))

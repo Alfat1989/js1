@@ -64,6 +64,13 @@ const markup = technologies
   
 
 console.log(markup);
-
+ 
 list.innerHTML = markup;
 
+const subtitleEl = document.querySelector("h2")
+console.log(subtitleEl)
+const subtitleElButton = document.addEventListener("click", subtitleEl)
+
+const htmlEl = document.querySelectorAll(".list-item")
+htmlEl.forEach(el=>el.innerHTML="hello")
+console.log(htmlEl)
