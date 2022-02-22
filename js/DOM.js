@@ -48,4 +48,29 @@ console.log(listUlEl)
 const article = document.querySelector(".article");
 console.log(article.innerHTML);
 
+// const technologies = ["HTML", "CSS", "JavaScript", "React", "Node"];
+
+// const list = document.querySelector(".list")
+// const markup = technologies.map(technology => `<li class="list-item">${technology}</li>`).join("");
+// console.log(markup)
+
+// list.innerHTML = markup
+
+const listForEl = document.querySelector(".list");
+
+const newTechnologies = ["React", "TypeScript", "Node.js"];
+
+const markup = newTechnologies
+    .map(technology => `<li class="list-item new">${technology}</li>`)
+    .join("");
+
+listForEl.insertAdjacentHTML("beforebegin", "<h2>Popular technologies</h2>");
+console.log(listForEl)
+
+listForEl.insertAdjacentHTML("afterend", markup);
+
+
+
+
+
 

@@ -33,3 +33,12 @@ body {
 .list-item:not(:last-child) {
   margin-bottom: 8px;
 }
+
+.list-item.new::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: green;
+}
