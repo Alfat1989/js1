@@ -1,76 +1,32 @@
+const divEl = document.querySelector(".container")
+divEl.classList.add("js-container")
 
+console.log(divEl)
 
-const btnEl = document.querySelector(".btn")
-btnEl.style.backgroundColor="pink"
-btnEl.textContent="pink"
-btnEl.setAttribute("type", "button")
+const paragraphEl = document.createElement("label")
+paragraphEl.textContent="Введите пароль"
+console.log(paragraphEl)
 
-btnEl.setAttribute("data-action", "save")
+const inputEl = document.createElement("input")
+paragraphEl.append(inputEl)
 
-console.log(btnEl.dataset.action)
-
-console.log(btnEl.hasAttribute("type"))
-
-
-console.log(btnEl)
-console.log(btnEl.attributes)
-
-
-const newTagEl = document.createElement("h1");
-newTagEl.textContent="This is h1 tag"
-console.log(newTagEl)
-
-const imageEl = document.createElement("img")
-imageEl.src = "https://avatars.mds.yandex.net/i?id=5f28b35384960743cf4aa743467a92fd-5877456-images-thumbs&n=13"
-imageEl.alt = "Cosmos"
+divEl.append(paragraphEl)
 
 
 
-console.log(imageEl)
+console.log(inputEl.value)
 
-const listEl = document.createElement("ul")
-console.log(listEl)
+const getCllass = function (name) {
+    console.log(name.class)
+}
 
-const itemUlEl = document.createElement("li")
-itemUlEl.classList="img-main"
-console.log(itemUlEl)
+// const newClass=buttonEl.classList.toggle("conts")
 
-itemUlEl.append(imageEl)
+const buttonEl = document.createElement("button")
+buttonEl.type="button"
+buttonEl.textContent = "Кнопка"
+buttonEl.classList.add("button")
+console.log(buttonEl)
 
-listEl.append(itemUlEl)
-
-console.log(listEl)
-
-const listUlEl = document.querySelector(".list-element")
-listUlEl.append(itemUlEl)
-console.log(listUlEl)
-
-const article = document.querySelector(".article");
-console.log(article.innerHTML);
-
-// const technologies = ["HTML", "CSS", "JavaScript", "React", "Node"];
-
-// const list = document.querySelector(".list")
-// const markup = technologies.map(technology => `<li class="list-item">${technology}</li>`).join("");
-// console.log(markup)
-
-// list.innerHTML = markup
-
-const listForEl = document.querySelector(".list");
-
-const newTechnologies = ["React", "TypeScript", "Node.js"];
-
-const markup = newTechnologies
-    .map(technology => `<li class="list-item new">${technology}</li>`)
-    .join("");
-
-listForEl.insertAdjacentHTML("beforebegin", "<h2>Popular technologies</h2>");
-console.log(listForEl)
-
-listForEl.insertAdjacentHTML("afterend", markup);
-
-
-
-
-
-
+divEl.append(buttonEL)
+dfgdfg
