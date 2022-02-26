@@ -175,38 +175,59 @@
 // console.log(reverseWords("This is an example!"))
 
 /////////////////////////количкство пассажиров//////////////////////
-const number = function(busStops){
-  // console.log(busStops)
+// const number = function(busStops){
+//   // console.log(busStops)
   
-  return busStops.reduce((acc,el)=>acc+(el[0]-el[1]),0);
+//   return busStops.reduce((acc,el)=>acc+(el[0]-el[1]),0);
   
-}
+// }
 
-console.log(number([[3, 0], [9, 1], [4, 8], [12, 2], [6, 1], [7, 8]]))
+// console.log(number([[3, 0], [9, 1], [4, 8], [12, 2], [6, 1], [7, 8]]))
 
 //////////////////////////////сумма положительных чисел//////////////////////////
-function positiveSum(arr) {
-  const number = arr.reduce((acc, el) => {
-    return el>0? acc+el:acc
-  }, 0)
-  return number
-}
+// function positiveSum(arr) {
+//   const number = arr.reduce((acc, el) => {
+//     return el>0? acc+el:acc
+//   }, 0)
+//   return number
+// }
 
-console.log(positiveSum([-1, -2, -3, -4, -5]));
+// console.log(positiveSum([-1, -2, -3, -4, -5]));
 
 
 //////////////////////////////////////////Если среднее число массива меньше чем параметр yourPoints)
-function betterThanAverage(classPoints, yourPoints) {
-  return [...classPoints].reduce((acc, el) => acc+el, 0)/ classPoints.length < yourPoints ? true : false;
+// function betterThanAverage(classPoints, yourPoints) {
+//   return [...classPoints].reduce((acc, el) => acc+el, 0)/ classPoints.length < yourPoints ? true : false;
   
   
-}
+// }
 
-console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75))
+// console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75))
 
 
-function sumMix(x){
-  return x.reduce((acc,el)=>acc+Number(el),0)
-}
+// function sumMix(x){
+//   return x.reduce((acc,el)=>acc+Number(el),0)
+// }
 
-console.log(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]))
+// console.log(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]))
+
+
+////////////////////////////////////////////////////////////// 
+const divEl = document.createElement("div")
+divEl.classList.add("container")
+console.log(divEl)
+
+divEl.innerHTML = `<ul>
+<li><a>Ссылка1</a></li>
+<li><a>Ссылка2</a></li>
+<li><a>Ссылка3</a></li>
+</ul>`
+// divEl.append(ulEl)
+ 
+
+const bodyEl = document.querySelector("body")
+bodyEl.append(divEl)
+
+
+
+ 
