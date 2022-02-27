@@ -212,22 +212,56 @@
 // console.log(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]))
 
 
-////////////////////////////////////////////////////////////// 
-const divEl = document.createElement("div")
-divEl.classList.add("container")
-console.log(divEl)
+// //////////////////////////////////////////////////////////////
+// const divEl = document.createElement("div")
+// divEl.classList.add("container")
+// console.log(divEl)
 
-divEl.innerHTML = `<ul>
-<li><a>Ссылка1</a></li>
-<li><a>Ссылка2</a></li>
-<li><a>Ссылка3</a></li>
-</ul>`
-// divEl.append(ulEl)
+// divEl.innerHTML = `<ul>
+// <li><a>Ссылка1</a></li>
+// <li><a>Ссылка2</a></li>
+// <li><a>Ссылка3</a></li>
+// </ul>`
+// // divEl.append(ulEl)
  
 
-const bodyEl = document.querySelector("body")
-bodyEl.append(divEl)
+// const bodyEl = document.querySelector("body")
+// bodyEl.append(divEl)
 
 
 
- 
+//  Цель этого упражнения — преобразовать строку в новую строку,
+//     где каждый символ в новой строке — это «(», если этот символ встречается в исходной
+//         строке только один раз,
+//     или «)», если этот символ встречается в исходной строке более одного раза.нить.
+//     Игнорировать заглавные буквы при определении, является ли символ дубликатом.
+
+// Примеры
+// "дин" => "((("
+// "отступить" => "()()()"
+// "Успех" => ")())())"
+// "(( @" => "))(("
+// Примечания
+// Сообщения об утверждениях могут быть неясными в отношении того,
+//     что они отображают на некоторых языках.Если вы читаете «... Это должно кодировать XXX»,
+//      «XXX» - это ожидаемый результат, а не ввод!
+
+
+const changeLetter = function (word) {
+    const newWords = [...word]
+    
+    console.log(newWords)
+    const secondWord = [...word].forEach(el => {
+        const newArr=[]
+        if (newWords.includes(el)) {
+            newArr.push("(")
+        }
+        return newArr
+        
+    })
+        
+
+   
+}
+
+console.log(changeLetter("дин"))
