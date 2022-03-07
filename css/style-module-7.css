@@ -1,0 +1,27 @@
+body {
+  background-color: bisque;
+}
+
+.container {
+  padding: 10px;
+  outline: 1px solid rgb(214, 154, 24);
+}
+
+.list-container {
+  padding: 40px 10px;
+  background-color: antiquewhite;
+}
+
+.tags {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+}
+
+.tag__item {
+  padding: 2px;
+}
+
+.tags__btn--active {
+  background-color: rgb(63, 63, 190);
+}
