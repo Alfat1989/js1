@@ -247,21 +247,81 @@
 //      «XXX» - это ожидаемый результат, а не ввод!
 
 
-const changeLetter = function (word) {
-    const newWords = [...word]
+// const changeLetter = function (word) {
+//     const newWords = [...word]
     
-    console.log(newWords)
-    const secondWord = [...word].forEach(el => {
-        const newArr=[]
-        if (newWords.includes(el)) {
-            newArr.push("(")
-        }
-        return newArr
+//     console.log(newWords)
+//     const secondWord = [...word].forEach(el => {
+//         const newArr=[]
+//         if (newWords.includes(el)) {
+//             newArr.push("(")
+//         }
+//         return newArr
         
-    })
+//     })
         
 
    
+// }
+
+// console.log(changeLetter("дин"))
+
+
+// function convertMoney(money) {
+//     const cny = 6.75
+//     const convert = money * cny;
+//     // console.log(convert.toFixed(2))
+//     return `${convert} Chines Yuan`
+// }
+
+// console.log(convertMoney(50))
+
+
+// function whatCentury(yearString) {
+//     let century = Number(yearString.substr(0, 2));
+//     // console.log(century)
+    
+//     const yearNumber = Number(yearString);
+//     if (yearNumber%100 !==0) {
+//         century+=1
+//     }
+
+//     // console.log(century)
+
+//     const num=Number(String(century).slice(-1))
+
+//     let suffix = ''
+    
+//     switch (num) {
+//         case 1:
+//             suffix = "st";
+//             break;
+        
+//         case 2:
+//             suffix ='nd';
+//             break;
+        
+//         case 3:
+//             suffix ='rd';
+//             break;
+        
+//         default:
+//             suffix = 'th';
+//     }
+
+//     return century+suffix
+    
+// }
+
+// console.log(whatCentury("1999"))
+
+
+
+function pillars(num_pill, dist, width) {
+    if (num_pill <= 1) {
+        return 0;
+    }
+    return ((dist*100)*(num_pill-1)+(width*(num_pill-2)))
 }
 
-console.log(changeLetter("дин"))
+console.log(pillars(11,15,30))
