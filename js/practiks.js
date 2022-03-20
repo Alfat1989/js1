@@ -317,11 +317,51 @@
 
 
 
-function pillars(num_pill, dist, width) {
-    if (num_pill <= 1) {
-        return 0;
+// function pillars(num_pill, dist, width) {
+//     if (num_pill <= 1) {
+//         return 0;
+//     }
+//     return ((dist*100)*(num_pill-1)+(width*(num_pill-2)))
+// }
+
+// console.log(pillars(11,15,30))
+
+function dotCalculator(e) {
+    const array = e.split(' ')
+    const firstEl = array[0].length;
+    const secondEl = array[2].length;
+    const operand = array[1];
+
+    if (operand==='+') {
+        return Math.floor(firstEl+secondEl)
     }
-    return ((dist*100)*(num_pill-1)+(width*(num_pill-2)))
+    if (operand==='-') {
+        return Math.floor(firstEl-secondEl)
+    }
+    if (operand==='*') {
+        return Math.floor(firstEl*secondEl)
+    }
+    if (operand==='//') {
+        return Math.floor(firstEl/secondEl)
+    }
 }
 
-console.log(pillars(11,15,30))
+console.log(dotCalculator('... // .....'))
+
+
+
+
+// function dotCalculator (e) {
+// 	const array = e.replace('//', '/').split(" ");
+//   const firstEl = array[0].length;
+//   const secondEl = array[2].length;
+//   const opperrand = array[1];
+//   const count = Math.floor(eval(`${firstEl} ${opperrand} ${secondEl}`));
+  
+//   if (count < 1) return '';
+     
+//   const result = new Array(count).fill('.').join('');
+ 
+//   return result;
+
+// };
