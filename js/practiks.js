@@ -326,27 +326,27 @@
 
 // console.log(pillars(11,15,30))
 
-function dotCalculator(e) {
-    const array = e.split(' ')
-    const firstEl = array[0].length;
-    const secondEl = array[2].length;
-    const operand = array[1];
+// function dotCalculator(e) {
+//     const array = e.split(' ')
+//     const firstEl = array[0].length;
+//     const secondEl = array[2].length;
+//     const operand = array[1];
 
-    if (operand==='+') {
-        return Math.floor(firstEl+secondEl)
-    }
-    if (operand==='-') {
-        return Math.floor(firstEl-secondEl)
-    }
-    if (operand==='*') {
-        return Math.floor(firstEl*secondEl)
-    }
-    if (operand==='//') {
-        return Math.floor(firstEl/secondEl)
-    }
-}
+//     if (operand==='+') {
+//         return Math.floor(firstEl+secondEl)
+//     }
+//     if (operand==='-') {
+//         return Math.floor(firstEl-secondEl)
+//     }
+//     if (operand==='*') {
+//         return Math.floor(firstEl*secondEl)
+//     }
+//     if (operand==='//') {
+//         return Math.floor(firstEl/secondEl)
+//     }
+// }
 
-console.log(dotCalculator('... // .....'))
+// console.log(dotCalculator('... // .....'))
 
 
 
@@ -365,3 +365,13 @@ console.log(dotCalculator('... // .....'))
 //   return result;
 
 // };
+
+
+function sumDigits(number) {
+  return number
+    .toString()
+    .split('')
+    .map(e=>e!=='-')
+    .reduce((previousValue, currentValue)=>previousValue+Number(currentValue),0)
+
+}
