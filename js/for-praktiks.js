@@ -238,19 +238,95 @@
 
 
 
-function getCount(str) {
-  let vowelsCount = 0;
-  const considers = ['a', 'e', 'i', 'o', 'u'];
-  for (let consider of considers) {
-    for (let s of str)
-      if (s === consider) {
-        vowelsCount += 1;
-      }
+// function getCount(str) {
+//   let vowelsCount = 0;
+//   const considers = ['a', 'e', 'i', 'o', 'u'];
+//   for (let consider of considers) {
+//     for (let s of str)
+//       if (s === consider) {
+//         vowelsCount += 1;
+//       }
+//   }
+  
+//   // enter your majic here
+  
+//   return vowelsCount;
+// }
+
+// console.log(getCount('abracadabra'))
+
+
+// var greet = function (name) {
+//   const hello = "Hello";
+//   return hello.concat(
+//     " ",
+//     name[0].toUpperCase(),
+//     name.slice(1).toLowerCase(),
+//     "!"
+//   );
+// };
+
+
+// console.log(greet('rikk'))
+
+
+
+// function highAndLow(numbers){
+//   const arrNumbers = numbers.split(' ')
+//   console.log(arrNumbers)
+//   return `${Math.max(...arrNumbers)} ${Math.min(...arrNumbers)}`
+// }
+
+// console.log(highAndLow("1 2 3 4 5"))
+
+
+
+// function roundToNext5(n){
+    
+//   for (let i = n; ; i += 1){
+//       if (i%5===0) {
+//         return i
+//       }
+//   }
+
+// }
+
+// console.log(roundToNext5(-5))
+
+
+
+// function sortByLength (array) {
+//  return [...array].sort((a,b)=>a.length-b.length)
+// };
+
+
+// console.log(sortByLength(["Telescopes", "Glasses", "Eyes", "Eyesa","et",'', "Monocles"]))
+
+
+ 
+function capitalize(s) {
+
+  const firstArray = []
+  const secondstArray = []
+  for (let i = 0; i < s.length; i += 1) {
+    if (i % 2 === 0) {
+      firstArray.push(s[i].toUpperCase())
+    } else {
+      firstArray.push(s[i])
+    }
+      
   }
-  
-  // enter your majic here
-  
-  return vowelsCount;
+
+  for (let i = 0; i < s.length; i += 1) {
+    if (i % 2 !== 0) {
+      secondstArray.push(s[i].toUpperCase())
+    } else {
+      secondstArray.push(s[i])
+    }
+    
+  }
+
+  return [`${firstArray.join('')}`, `${secondstArray.join('')}`]
 }
 
-console.log(getCount('abracadabra'))
+console.log(capitalize("abcdef"))
