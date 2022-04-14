@@ -1,5 +1,7 @@
 // import users from "./export-file.js";
 
+console.log('hello world')
+
 // const sectionEl = document.querySelector('.section')
 
 // const markup = [];
@@ -304,29 +306,64 @@
 
 
  
-function capitalize(s) {
+// function capitalize(s) {
 
-  const firstArray = []
-  const secondstArray = []
-  for (let i = 0; i < s.length; i += 1) {
-    if (i % 2 === 0) {
-      firstArray.push(s[i].toUpperCase())
-    } else {
-      firstArray.push(s[i])
-    }
+//   const firstArray = []
+//   const secondstArray = []
+//   for (let i = 0; i < s.length; i += 1) {
+//     if (i % 2 === 0) {
+//       firstArray.push(s[i].toUpperCase())
+//     } else {
+//       firstArray.push(s[i])
+//     }
       
-  }
+//   }
 
-  for (let i = 0; i < s.length; i += 1) {
-    if (i % 2 !== 0) {
-      secondstArray.push(s[i].toUpperCase())
-    } else {
-      secondstArray.push(s[i])
-    }
+//   for (let i = 0; i < s.length; i += 1) {
+//     if (i % 2 !== 0) {
+//       secondstArray.push(s[i].toUpperCase())
+//     } else {
+//       secondstArray.push(s[i])
+//     }
     
-  }
+//   }
 
-  return [`${firstArray.join('')}`, `${secondstArray.join('')}`]
-}
+//   return [`${firstArray.join('')}`, `${secondstArray.join('')}`]
+// }
 
-console.log(capitalize("abcdef"))
+// console.log(capitalize("abcdef"))
+
+
+// function maskyt(cc) {
+//   if (cc.length <= 4) return cc;
+// }
+
+// console.log(maskyt(''))
+
+// function unusedDigits(array) {
+//   const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+//   const arr2 = array.join('').split('').map(Number)
+//   console.log(arr2)
+//   const newArr = [];
+//   for (let i = 0; i <= arr2.length; i += 1){
+//     for (let j = 0; j <= arr.length; j += 1){
+//       if (arr2[i]===(arr[j])) {
+//         newArr.push(arr2[i])
+//       }
+//     }
+//     return newArr
+//   }
+// }
+
+// console.log(unusedDigits([12,34,56,78]))
+
+// function pos_to_neg(num) {
+//   if (num<=0) {
+//     return num
+//   }
+// return -Math.abs(num);
+// }
+
+// console.log(pos_to_neg(-1))
+
+
