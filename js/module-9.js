@@ -26,7 +26,7 @@
 //     console.log(error); // "Error! Error passed to reject function"
 //   }
 // );
-// promise.then(onYes).then(onSecondYes).catch(onNo).finally(onFinaly) 
+// promise.then(onYes).then(onSecondYes).catch(onNo).finally(onFinaly)
 
 // function onYes() {
 //     console.log('will yesssssss')
@@ -53,19 +53,28 @@
 
 ////////////////////////////////////////////
 
-const promise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve(5);
-  }, 2000);
-});
+// const promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve(5);
+//   }, 2000);
+// });
 
-promise.then(value => {
-    console.log('yes');
-    return value*2
-}).then(value => {
-    console.log('second yes');
-    console.log(value)
-}).catch(error => {
-    console.log(error)
-}).finally()
+// promise.then(value => {
+//     console.log('yes');
+//     return value*2
+// }).then(value => {
+//     console.log('second yes');
+//     console.log(value)
+// }).catch(error => {
+//     console.log(error)
+// }).finally()
 
+function nbYear(p0, percent, aug, p) {
+  // your code
+  for(i = 0; p > p0; i++) {
+    p0 = Math.floor(p0 + p0 * percent / 100 + aug);
+  }
+  return i;
+}
+
+console.log(nbYear(1500000, 2.5, 10000, 2000000))
