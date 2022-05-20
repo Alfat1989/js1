@@ -69,12 +69,54 @@
 //     console.log(error)
 // }).finally()
 
-function nbYear(p0, percent, aug, p) {
-  // your code
-  for(i = 0; p > p0; i++) {
-    p0 = Math.floor(p0 + p0 * percent / 100 + aug);
+// function nbYear(p0, percent, aug, p) {
+//   // your code
+//   for(i = 0; p > p0; i++) {
+//     p0 = Math.floor(p0 + p0 * percent / 100 + aug);
+//   }
+//   return i;
+// }
+
+// console.log(nbYear(1500000, 2.5, 10000, 2000000))
+
+
+// function getFruit(name) {
+//   const fruits = {
+//     srawberry: 'strawberry1',
+//     kiwi: 'kiwi1',
+//     apple: 'apple1'
+//   }
+
+//   return Promise.resolve(fruits[name]);
+// }
+
+// getFruit('apple').then(apple=>console.log(apple))
+
+
+function findOutliner(numbers) {
+  const odd = []
+  const even = []
+
+  for (let i = 0; i < numbers.length; i += 1) {
+    
+    if (numbers[i] % 2 === 0) {
+      even.push(numbers[i])
+        
+    } else {
+      odd.push(numbers[i])
+     
+    }
+
   }
-  return i;
+
+  if (odd.length < even.length) {
+    return odd[0];
+  } else {
+    return even[0]
+  }
+
 }
 
-console.log(nbYear(1500000, 2.5, 10000, 2000000))
+
+console.log(findOutliner([2,3,4,6,8]))
+console.log(findOutliner([3,5,6,7,9]))
