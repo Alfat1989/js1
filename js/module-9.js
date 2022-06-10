@@ -93,30 +93,50 @@
 // getFruit('apple').then(apple=>console.log(apple))
 
 
-function findOutliner(numbers) {
-  const odd = []
-  const even = []
+// function findOutliner(numbers) {
+//   const odd = []
+//   const even = []
 
-  for (let i = 0; i < numbers.length; i += 1) {
+//   for (let i = 0; i < numbers.length; i += 1) {
     
-    if (numbers[i] % 2 === 0) {
-      even.push(numbers[i])
+//     if (numbers[i] % 2 === 0) {
+//       even.push(numbers[i])
         
-    } else {
-      odd.push(numbers[i])
+//     } else {
+//       odd.push(numbers[i])
      
+//     }
+
+//   }
+
+//   if (odd.length < even.length) {
+//     return odd[0];
+//   } else {
+//     return even[0]
+//   }
+
+// }
+
+
+// console.log(findOutliner([2,3,4,6,8]))
+// console.log(findOutliner([3,5,6,7,9]))
+
+function persistence(num) {
+  let result;
+  const x = String(num).split('');
+  console.log(x);
+  
+  if(num > 9 && num > 99){
+    // result = x.reduce((acc, elem) => {
+    //   acc *= Number(elem);
+    //   return acc;
+    // }, 1);
+    return x.map(elem => Number(elem) * Number(elem+1));
     }
-
-  }
-
-  if (odd.length < even.length) {
-    return odd[0];
-  } else {
-    return even[0]
-  }
-
+    
+    // return x;
 }
 
-
-console.log(findOutliner([2,3,4,6,8]))
-console.log(findOutliner([3,5,6,7,9]))
+console.log(persistence(39)) //,3);
+// console.log(persistence(4)) //,0);
+// console.log(persistence(25)) //,2);
